@@ -1,0 +1,27 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Comment {
+  id              Int      @id @default(autoincrement())
+  date_of_insert  DateTime
+  time_of_insert  DateTime
+  user_name       String
+  user_id         Int
+  ordinal_date    DateTime
+  month_selected  String
+  day_selected    Int
+  branch          String
+  shift           String
+  comment_type    String
+  comment         String
+  related_section String
+  receipt_number  String?
+  description     String?
+}

@@ -5,7 +5,7 @@ import CommentForm from '../components/CommentForm';
 const Home: React.FC = () => {
   return (
       <Layout>
-        <h1 className="text-2xl font-bold">Telegram Miniapp</h1>
+        <h1 className="text-2xl font-bold accent-red-700">Telegram Miniapp</h1>
         <CommentForm />
       </Layout>
   );
